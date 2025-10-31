@@ -1,0 +1,393 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  padding: 16px 48px;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  color: #26907B;
+  height: 64px;
+}
+
+#burgerMenu {
+  display: none;
+}
+
+header h2, header nav a {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.logoName {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logoName span {
+  color: #E19EAD;
+}
+
+nav {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 32px;
+}
+
+nav li {
+  list-style-type: none;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.languageSelector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 8px;
+  background-color: #E898A0;
+  border-radius: 4px;
+  color: white;
+  width: 128px;
+}
+
+.language {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.language img {
+  width: 24px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid white;
+}
+
+.hero img {
+  width: 100%;
+  filter: brightness(.6);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.heroContent {
+  z-index: 1;
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: white;
+  max-width: 100%;
+  gap: 16px;
+  text-transform: uppercase;
+}
+
+.heroContent p:nth-child(1){
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.heroContent p:nth-child(2) {
+  font-size: 28px;
+  letter-spacing: 2.5px;
+  line-height: 42px;
+}
+
+.btn {
+  background-color: #E19EAD;
+  color: white;
+  padding: 4px 24px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  height: 48px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #d88795;
+}
+
+.club {
+  z-index: 2;
+  position: fixed;
+  bottom: 24px;
+  left: 32px;  
+  background-color: #E19EAD;
+  color: white;
+  padding: 4px 16px;
+  text-align: center;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 48px;
+  height: 48px;
+}
+
+.club:hover {
+  background-color: #d88795;
+}
+
+.club img {
+  height: 20px;
+  width: 20px;
+}
+
+.chat {
+  position: fixed;
+  z-index: 2;
+  bottom: 24px;
+  right: 32px;
+  width: 72px;
+  height: 72px;
+  background-color: #E19EAD;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat:hover {
+  background-color: #d88795;
+}
+
+.chat img {
+  height: 40px;
+  width: 40px;
+}
+
+.slogan {
+  margin: 24px 0;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 2px;
+  color: #555555;
+}
+
+/* Media queries */
+
+@media (max-width: 480px) {
+  header {
+    padding: 8px 16px;
+    justify-content: space-between;
+    gap: 4px;
+    height: auto;
+  }
+
+  #burgerMenu {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .logoName {
+    font-size: 20px;
+  }
+
+  .languageSelector {
+    width: 112px;
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+
+  .hero img {
+    height: 450px;
+    object-fit: cover;
+  }
+
+  .heroContent {
+    top: 45%;
+    left: 5%;
+    max-width: 90%;
+    gap: 6px;
+  }
+
+  .heroContent p:nth-child(1) {
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  .heroContent p:nth-child(2) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .btn {
+    height: 28px;
+    font-size: 10px;
+    padding: 4px 12px;
+  }
+
+  .club {
+    bottom: 16px;
+    left: 16px;
+    height: 40px;
+    padding: 4px 12px;
+    gap: 12px;
+  }
+
+  .chat {
+    bottom: 16px;
+    right: 16px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .chat img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .slogan {
+    font-size: 14px;
+  }
+}
+
+@media (width > 480px) and (width < 768px) {
+  .heroContent {
+    top: 15%;
+    left: 5%;
+    max-width: 90%;
+    gap: 4px;
+  }
+
+  .heroContent p:nth-child(1) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .heroContent p:nth-child(2) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .btn {
+    height: 32px;
+    font-size: 11px;
+    padding: 4px 16px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    height: auto;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 16px;
+    z-index: 3;
+  }
+
+  .slogan {
+    font-size: 16px;
+  }
+}
+
+@media (width >= 768px) and (width < 1024px) {
+  .heroContent {
+    top: 35%;
+    left: 5%;
+    max-width: 90%;
+    gap: 12px;
+  }
+
+  .heroContent p:nth-child(1) {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .heroContent p:nth-child(2) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .btn {
+    height: 40px;
+    font-size: 12px;
+    padding: 4px 16px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    height: auto;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 16px;
+    z-index: 3;
+  }
+
+  .slogan {
+    font-size: 24px;
+  }
+}
+
+@media (width >= 1024px) and (width < 1500px) {
+  .heroContent {
+    top: 45%;
+    left: 5%;
+    max-width: 90%;
+    gap: 14px;
+  }
+
+  .heroContent p:nth-child(1) {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .heroContent p:nth-child(2) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .btn {
+    height: 44px;
+    font-size: 12px;
+    padding: 4px 20px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    height: auto;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 16px;
+    z-index: 3;
+  }
+}
