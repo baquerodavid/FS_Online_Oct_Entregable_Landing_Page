@@ -50,6 +50,10 @@ nav li {
   align-items: center;
 }
 
+nav li:hover {
+  text-decoration: underline;
+}
+
 .languageSelector {
   display: flex;
   align-items: center;
