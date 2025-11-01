@@ -1,3 +1,96 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -275,11 +368,38 @@ nav li:hover {
 }
 
 @media (width > 480px) and (width < 768px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 48px;
+    justify-content: space-evenly;
+    padding: 24px;
+    height:min-content;
+    width: min-content;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 16px;
+    z-index: 3;
+  }
+
+  .hero img {
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+  }
+
   .heroContent {
-    top: 15%;
+    top: 65%;
     left: 5%;
     max-width: 90%;
-    gap: 4px;
+    gap: 32px;
   }
 
   .heroContent p:nth-child(1) {
@@ -296,19 +416,6 @@ nav li:hover {
     height: 32px;
     font-size: 11px;
     padding: 4px 16px;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    height: auto;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    gap: 16px;
-    z-index: 3;
   }
 
   .slogan {
