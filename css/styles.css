@@ -278,6 +278,12 @@ nav li:hover {
   width: 40px;
 }
 
+.chat a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .slogan {
   margin: 24px 0;
   text-align: center;
