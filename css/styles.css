@@ -306,7 +306,12 @@ nav li:hover {
     display: block;
   }
 
-  nav {
+  #burgerMenuBtn {
+  background: none;
+  border: none;
+  }
+
+  #mainNav {
     display: none;
   }
 
